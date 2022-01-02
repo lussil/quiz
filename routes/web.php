@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\QuestaoController;
+use App\Http\Controllers\AlternativaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +15,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', [AlternativaController::class, 'index'])->name('quiz.index');
+
+
+Route::get('quiz/create', [QuestaoController::class, 'create'])->name('quiz.create');
+
+Route::post('quiz/store', [QuestaoController::class, 'store'])->name('quiz.store');
+
+
+Route::get('quiz', [QuestaoController::class, 'quiz'])->name('quiz');
+
+
+
+// Route::get('/', [SiteController::class, 'index'])->name('doceriagardenia.index');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->name('dashboard');
+
+
+
+
 
 require __DIR__.'/auth.php';

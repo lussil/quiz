@@ -22,7 +22,14 @@ class QuestaoSeeder extends Seeder
             'questao' => 'Os sofistas desenvolveram-se em qual contexto da Grécia Antiga?',
                 ]);
         Questao::create([
-             'questao' => 'Como ficou conhecido a noção de regime absolutista que possuía alguns princípios iluministas?',
+             'questao' => 'A expressão laissez faire, laissez passer está vinculada à seguinte escola econômica:',
                 ]);
+        Questao::create([
+            'questao' => 'O que o termo Mesopotâmia significa?',
+                ]);
+
+                Questao::create([
+                    'questao' => 'O ____________ compreende as reações de síntese de substâncias que serão utilizadas para o crescimento do organismo e reparação de suas perdas. A opção que substitui o espaço em branco é:',
+                        ]);
     }
 }

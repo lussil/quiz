@@ -10,10 +10,10 @@ class Alternativa extends Model
 {
     use HasFactory;
 
+  
     public function questao()
     {
-        return $this->belongsToMany(Questao::class, 'questao_alternativas');
+        return $this->hasOne(Questao::class, 'id', 'questao_id');
     }
-
 
 }

@@ -16,8 +16,17 @@
 </head>
 
 <body>
-    <h1>Crie uma Questão</h1>
 
+    @if (Session::has('message'))
+
+    <div class="alert alert-info alert-dismissible text-center fade show" role="alert">
+        {{ Session::get('message') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+    @endif
+
+    
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
