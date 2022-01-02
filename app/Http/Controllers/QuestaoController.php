@@ -122,6 +122,31 @@ class QuestaoController extends Controller
         return view('quiz.quiz', ['alternativa' => $alternativa , 'questao' =>$questao, 'pontos'=>$pontos]);   
     }
 
+     /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Questao  $questao
+     * @return \Illuminate\Http\Response
+     */
+    public function resposta(Request $request)
+    {
+        $message = [
+            'alternativas.required' =>'Selecione uma resposta'
+        ];
+
+
+        $validated = $request->validate([
+            'alternativas' => 'required'
+           
+        ], $message );
+
+        $resposta = $request->alternativas;
+
+
+        return redirect()->route('quiz.index')->with('message','Questão Respondida Com Sucesso');
+
+    }
+
 
      /**
      * Display the specified resource.

@@ -25,7 +25,10 @@ Route::get('quiz/create', [QuestaoController::class, 'create'])->name('quiz.crea
 Route::post('quiz/store', [QuestaoController::class, 'store'])->name('quiz.store');
 
 
+Route::post('quiz/resposta', [QuestaoController::class, 'resposta'])->name('quiz.resposta');
+
 Route::get('quiz', [QuestaoController::class, 'quiz'])->name('quiz');
+
 
 
 
