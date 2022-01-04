@@ -128,24 +128,7 @@ class QuestaoController extends Controller
      * @param  \App\Models\Questao  $questao
      * @return \Illuminate\Http\Response
      */
-    public function resposta(Request $request)
-    {
-        $message = [
-            'alternativas.required' =>'Selecione uma resposta'
-        ];
 
-
-        $validated = $request->validate([
-            'alternativas' => 'required'
-           
-        ], $message );
-
-        $resposta = $request->alternativas;
-
-
-        return redirect()->route('quiz.index')->with('message','Questão Respondida Com Sucesso');
-
-    }
 
 
      /**
