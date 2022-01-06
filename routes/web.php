@@ -27,15 +27,14 @@ Route::get('quiz/create', [QuestaoController::class, 'create'])->name('quiz.crea
 
 Route::post('quiz/store', [QuestaoController::class, 'store'])->name('quiz.store');
 
+Route::post('quiz/calculaPontos', [QuizController::class, 'calculaPontos'])->name('quiz.calculaPontos');
 
 Route::post('quiz/resposta', [QuizController::class, 'resposta'])->name('quiz.resposta');
 
 Route::get('quiz', [QuestaoController::class, 'quiz'])->name('quiz');
 
+Route::get('quiz/estatisticas', [QuizController::class, 'estatisticas'])->name('quiz.estatisticas');
 
-
-
-// Route::get('/', [SiteController::class, 'index'])->name('doceriagardenia.index');
 
 
 Route::get('/dashboard', function () {

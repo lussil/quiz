@@ -32,7 +32,7 @@
     {{ Form::close() }}
 
     
-<a class="btn btn-warning" href="#">Encerrar Tentativa</a>
+<a class="btn btn-warning" href="{{ URL::route('quiz.estatisticas') }}">Encerrar Tentativa</a>
 <a class="btn btn-primary  mt-2 mb-2" href="{{ URL::route('quiz.index') }}">Voltar</a>
 
 </div>

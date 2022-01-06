@@ -16,7 +16,7 @@ class QuestaoSeeder extends Seeder
     {
        
         Questao::create([
-            'questao' => 'A expressão laissez faire, laissez passer está vinculada à seguinte escola econômica:',
+            'questao' => 'La única letra del alfabeto español que no existe en portugués es:',
                 ]);
         Questao::create([
             'questao' => 'Os sofistas desenvolveram-se em qual contexto da Grécia Antiga?',
@@ -27,9 +27,9 @@ class QuestaoSeeder extends Seeder
         Questao::create([
             'questao' => 'O que o termo Mesopotâmia significa?',
                 ]);
+        Questao::create([
+            'questao' => 'O ____________ compreende as reações de síntese de substâncias que serão utilizadas para o crescimento do organismo e reparação de suas perdas. A opção que substitui o espaço em branco é:',
+                ]);
 
-                Questao::create([
-                    'questao' => 'O ____________ compreende as reações de síntese de substâncias que serão utilizadas para o crescimento do organismo e reparação de suas perdas. A opção que substitui o espaço em branco é:',
-                        ]);
     }
 }
